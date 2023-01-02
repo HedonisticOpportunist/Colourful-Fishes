@@ -1,34 +1,58 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class RayCastHelpers : MonoBehaviour
 {
     // Variables 
-    private Vector3 position;
     [SerializeField] private GameObject controlInputManager;
+    private bool activateEyeGaze;
+    private Vector3 position;
 
-    void Update()
+    private void Update()
     {
-        if (controlInputManager.GetComponent<ControllerInput>().GripHasBeenPressed())
+        if (controlInputManager.GetComponent<CustomControllerInput>().GripHasBeenPressed())
         {
-            HitWithRaycast();
+            activateEyeGaze = false;
         }
+
+        else
+        {
+            activateEyeGaze = true;
+        }
+
+       // Debug.Log(activateEyeGaze);
+        HitWithRaycast(activateEyeGaze);
     }
 
-    private void HitWithRaycast()
+    private void HitWithRaycast(bool eyeGaze)
     {
-        position = Input.mousePosition;
-        //position = Camera.main.transform.forward;
-        Ray ray = Camera.main.ScreenPointToRay(position);
+        Ray ray = new(transform.position, transform.forward);
 
+        if (eyeGaze)
+        {
+            ray = new(Camera.main.transform.position, Camera.main.transform.forward);
+        }
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            ChangeFishColour target = hit.transform.GetComponent<ChangeFishColour>();
+            ChangeFishColour fishTarget = hit.transform.GetComponent<ChangeFishColour>();
+            SceneLoader uiTarget = hit.transform.GetComponent<SceneLoader>();
 
-            if (target != null)
+            if (fishTarget != null)
             {
                 Debug.Log(hit.transform.name);
-                target.ChangeColour();
+                fishTarget.ChangeColour();
+            }
+
+            if (uiTarget != null)
+            {
+                Debug.Log(hit.transform.name);
+                uiTarget.LoadScene();
+            }
+
+            else
+            {
+                Debug.Log("Nothing has been hit.");
             }
         }
     }

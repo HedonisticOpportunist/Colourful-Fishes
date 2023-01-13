@@ -169,10 +169,9 @@ GameObject:
   - component: {fileID: 90461407}
   - component: {fileID: 90461406}
   - component: {fileID: 90461405}
-  - component: {fileID: 90461408}
   m_Layer: 0
   m_Name: GazeButton
-  m_TagString: Untagged
+  m_TagString: GazeButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -280,18 +279,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90461403}
   m_CullTransparentMesh: 1
---- !u!114 &90461408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 90461403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8680e7df7193f6d4192bd9cdba50b546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &141306998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1023,10 +1010,9 @@ GameObject:
   - component: {fileID: 242284461}
   - component: {fileID: 242284460}
   - component: {fileID: 242284459}
-  - component: {fileID: 242284462}
   m_Layer: 0
   m_Name: GripButton
-  m_TagString: Untagged
+  m_TagString: GripButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1095,19 +1081,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 242284460}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1993770035}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &242284460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,18 +1120,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242284457}
   m_CullTransparentMesh: 1
---- !u!114 &242284462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 242284457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8680e7df7193f6d4192bd9cdba50b546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &268374932
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2051,7 @@ GameObject:
   - component: {fileID: 1375743441}
   - component: {fileID: 1375743440}
   - component: {fileID: 1375743439}
+  - component: {fileID: 1375743443}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -2199,6 +2162,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1375743443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375743437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9c26a6267fc4d4aa077f9f62965c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneLoader: {fileID: 1993770033}
 --- !u!1 &1477039788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6cd34008de8954fa422fdbb93a5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 0}
+  rightController: {fileID: 0}
 --- !u!1 &1993770033
 GameObject:
   m_ObjectHideFlags: 0

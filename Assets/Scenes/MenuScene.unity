@@ -2174,7 +2174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b9c26a6267fc4d4aa077f9f62965c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneLoader: {fileID: 1993770033}
+  eyeGaze: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
+  sceneLoader: {fileID: 1993770033}
 --- !u!1 &1477039788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2529,8 +2530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf6cd34008de8954fa422fdbb93a5f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftController: {fileID: 0}
-  rightController: {fileID: 0}
+  leftController: {fileID: 166200253}
+  rightController: {fileID: 437279549}
 --- !u!1 &1993770033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8680e7df7193f6d4192bd9cdba50b546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: GameScene
 --- !u!1 &2018150548
 GameObject:
   m_ObjectHideFlags: 0

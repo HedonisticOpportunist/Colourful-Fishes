@@ -5,55 +5,49 @@ public class RayCastHelpers : MonoBehaviour
 {
     // Variables 
     [SerializeField] private GameObject controlInputManager;
-    private bool activateEyeGaze;
+    [SerializeField] EyeGazeFlag eyeGazeFlag;
     private Vector3 position;
+  
+    private void Update() => HitWithRaycast();
 
-    private void Update()
+    private void HitWithRaycast()
     {
-        if (controlInputManager.GetComponent<CustomControllerInput>().GripHasBeenPressed())
-        {
-            activateEyeGaze = false;
-        }
-
-        else
-        {
-            activateEyeGaze = true;
-        }
-
-       // Debug.Log(activateEyeGaze);
-        HitWithRaycast(activateEyeGaze);
+        bool eyeGaze = eyeGazeFlag.eyeGazeFlag;
+        ChangeFishColour(GetRayType(eyeGaze));
     }
 
-    private void HitWithRaycast(bool eyeGaze)
+    // HELPERS //
+    private void ChangeFishColour(Ray ray)
+    {
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+            ChangeFishColour fishTarget = hit.transform.GetComponent<ChangeFishColour>();
+
+            if (fishTarget != null)
+            {
+                fishTarget.ChangeColour();
+            }
+        }
+    }
+
+    private Ray GetRayType(bool gaze)
     {
         Ray ray = new(transform.position, transform.forward);
 
-        if (eyeGaze)
+        if (gaze)
         {
             ray = new(Camera.main.transform.position, Camera.main.transform.forward);
         }
 
-        if (Physics.Raycast(ray, out RaycastHit hit))
+        else
         {
-            ChangeFishColour fishTarget = hit.transform.GetComponent<ChangeFishColour>();
-            SceneLoader uiTarget = hit.transform.GetComponent<SceneLoader>();
-
-            if (fishTarget != null)
+            if (controlInputManager.GetComponent<CustomControllerInput>().GripHasBeenPressed())
             {
-                Debug.Log(hit.transform.name);
-                fishTarget.ChangeColour();
-            }
-
-            if (uiTarget != null)
-            {
-                Debug.Log(hit.transform.name);
-                uiTarget.LoadScene();
-            }
-
-            else
-            {
-                Debug.Log("Nothing has been hit.");
+                position = Mouse.current.position.ReadValue();
+                ray = Camera.main.ScreenPointToRay(position);
             }
         }
+
+        return ray;
     }
 }

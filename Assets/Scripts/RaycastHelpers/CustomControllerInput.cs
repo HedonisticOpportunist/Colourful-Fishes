@@ -11,7 +11,7 @@ public class CustomControllerInput : MonoBehaviour
     {
         bool buttonWasPressed = false;
 
-        if (GetGripValue(leftController) > 0.0f || GetGripValue(rightController) > 0.0f)
+        if (GetGripValue(leftController) == 0.0f || GetGripValue(rightController) == 0.0f)
         {
             buttonWasPressed = true;
         }

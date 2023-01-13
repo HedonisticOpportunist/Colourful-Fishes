@@ -1352,6 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlInputManager: {fileID: 1627098683}
+  eyeGazeFlag: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
 --- !u!1 &1438460746
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,11 +12,8 @@ public class RayCastHelpers : MonoBehaviour
     // Position variables 
     private Vector3 position;
     private Vector3 startPosition;
-
     private Vector3 direction;
-    private Vector3 leftControllerPos;
-    private Vector3 rightControllerPos;
-
+    
     // Eye Gaze VR flag 
     private bool eyeGaze;
 
@@ -34,10 +31,6 @@ public class RayCastHelpers : MonoBehaviour
 
         // Set the eye gaze boolean value
         eyeGaze = eyeGazeFlag.eyeGazeFlag;
-
-        // Get the controller positions
-        leftControllerPos = controlInputManager.GetComponent<CustomControllerInput>().GetLeftHandControllerVectorPosition();
-        rightControllerPos = controlInputManager.GetComponent<CustomControllerInput>().GetRightHandControllerVectorPosition();
     }
 
     private void Update() => HitWithRaycast();
@@ -75,7 +68,7 @@ public class RayCastHelpers : MonoBehaviour
             if (controlInputManager.GetComponent<CustomControllerInput>().GripHasBeenPressed())
             {
 
-                position = leftControllerPos;
+                position = Mouse.current.position.ReadValue();
                 raycast = Camera.main.ScreenPointToRay(position);
             }
         }

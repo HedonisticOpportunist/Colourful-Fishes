@@ -18,7 +18,7 @@ public class RayCastHelpers : MonoBehaviour
     private bool eyeGaze;
 
     // Raycast variables
-    Ray ray;
+    Ray raycast;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class RayCastHelpers : MonoBehaviour
         direction = transform.forward;
 
         // Set up the Raycast
-        ray = new(startPosition, direction);
+        raycast = new(startPosition, direction);
 
         // Set the eye gaze boolean value
         eyeGaze = eyeGazeFlag.eyeGazeFlag;
@@ -38,7 +38,7 @@ public class RayCastHelpers : MonoBehaviour
     private void HitWithRaycast()
     {
 
-        ChangeFishColour(GetRayType(eyeGaze, ray));
+        ChangeFishColour(GetRayType(eyeGaze));
     }
 
     // HELPERS //
@@ -46,17 +46,25 @@ public class RayCastHelpers : MonoBehaviour
     {
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
+            //Debug.Log(hit.transform.name);
+
             // Change the colour of the fish 
             ChangeFishColour fishTarget = hit.transform.GetComponent<ChangeFishColour>();
 
             if (fishTarget != null)
             {
+                //Debug.Log(hit.transform.name);
                 fishTarget.ChangeColour();
             }
         }
+
+        else
+        {
+            //Debug.Log("No object was hit.");
+        }
     }
 
-    private Ray GetRayType(bool gaze, Ray raycast)
+    private Ray GetRayType(bool gaze)
     {
         if (gaze)
         {
@@ -65,12 +73,9 @@ public class RayCastHelpers : MonoBehaviour
 
         else
         {
-            if (controlInputManager.GetComponent<CustomControllerInput>().GripHasBeenPressed())
-            {
+            position = Mouse.current.position.ReadValue();
+            raycast = Camera.main.ScreenPointToRay(position);
 
-                position = Mouse.current.position.ReadValue();
-                raycast = Camera.main.ScreenPointToRay(position);
-            }
         }
 
         return raycast;

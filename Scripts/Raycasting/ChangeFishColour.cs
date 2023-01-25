@@ -5,6 +5,13 @@ public class ChangeFishColour : MonoBehaviour
 {
     public void ChangeColour()
     {
+       
+        SwitchColour();
+        
+    }
+
+    private void SwitchColour()
+    {
         // Get the material from the prefab 
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
@@ -23,4 +30,5 @@ public class ChangeFishColour : MonoBehaviour
     {
         return new Color[] { Color.cyan, Color.green, Color.white, Color.blue, Color.yellow };
     }
+
 }

@@ -65,9 +65,17 @@ public class RayCastHelpers : MonoBehaviour
 
     private Ray GetRayType(bool gaze)
     {
+        Debug.Log(gaze);
+
         if (gaze)
         {
             raycast = new(Camera.main.transform.position, Camera.main.transform.forward);
+        }
+        else
+        {
+            position = Mouse.current.position.ReadValue();
+            raycast = Camera.main.ScreenPointToRay(position);
+
         }
 
         return raycast;

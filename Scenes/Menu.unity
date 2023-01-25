@@ -875,7 +875,7 @@ GameObject:
   - component: {fileID: 366214637}
   - component: {fileID: 366214636}
   m_Layer: 0
-  m_Name: PlaneTeleportationArea
+  m_Name: PlaneTeleportation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,13 +1103,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Colorful Fishes (=^\u2013^)=\n\nTo get used to VR,  engage
+  m_text: "Welcome to Colourful Fishes (=^\u2013^)=\r\n\r\nTo get used to VR,  engage
     with the controllers to teleport to a cube of your liking. A purple, flattened
     cylinder will represent the teleportation area. You can also interact with the
-    balls. \r\n\r\nIn terms of actual gameplay, there are two options to change the
-    colour of the fish \u2013 namely by either using a VR gaze or using the raycasts
-    from the controllers. Please select the button that best represents your choice
-    to load the game scene. \r\n\n\n"
+    balls. \r\n\r\nIn terms of actual gameplay, there are two options: exploring
+    the fish or changing their colour using a gaze coming from the camera. Please
+    select the button that best represents your choice to load the game scene. \r\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1186,6 +1185,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 367148079}
   m_CullTransparentMesh: 1
+--- !u!1 &383946113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 383946114}
+  - component: {fileID: 383946115}
+  - component: {fileID: 383946116}
+  m_Layer: 0
+  m_Name: Boundary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &383946114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383946113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1119362130}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &383946115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383946113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 200, y: 20, z: 200}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &383946116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383946113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: befbac0dfbbe5354c90771702ed38014, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &401980014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1835,7 +1892,7 @@ GameObject:
   - component: {fileID: 595157581}
   - component: {fileID: 595157580}
   m_Layer: 0
-  m_Name: GazeButton
+  m_Name: ExploreButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2014,7 +2071,7 @@ GameObject:
   - component: {fileID: 611715740}
   - component: {fileID: 611715739}
   m_Layer: 0
-  m_Name: GazeButtonText
+  m_Name: ExploreButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2060,7 +2117,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Gaze
+  m_text: Explore
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3399,6 +3456,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 231977410}
+  - {fileID: 383946114}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

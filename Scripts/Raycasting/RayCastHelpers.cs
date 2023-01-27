@@ -34,16 +34,10 @@ public class RayCastHelpers : MonoBehaviour
 
     private void HitWithRaycast()
     {
-        if (eyeGaze)
+        if (eyeGaze == true)
         {
             ChangeFishColour(GetRayType());
-        }
-
-        else
-        {
-            Debug.Log("Nope.");
-        }
-       
+        }  
     }
 
     // HELPERS //

@@ -38,7 +38,7 @@ public class FlockManager : MonoBehaviour
             InstantiateFish(greenFish);
         }
 
-        else
+        if (eyeGaze == false)
         {
             InstantiateFish(smallFish);
             InstantiateFish(bigFish);

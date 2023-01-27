@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 
 /* RAYCAST HELPERS */
@@ -9,15 +8,14 @@ public class RayCastHelpers : MonoBehaviour
     [SerializeField] EyeGazeFlag eyeGazeFlag;
 
     // Position variables 
-    private Vector3 position;
     private Vector3 startPosition;
     private Vector3 direction;
-    
-    // Eye Gaze VR flag 
-    private bool eyeGaze;
 
     // Raycast variables
     Ray raycast;
+
+    // Eye Gaze VR flag 
+    private bool eyeGaze;
 
     private void Start()
     {
@@ -36,8 +34,16 @@ public class RayCastHelpers : MonoBehaviour
 
     private void HitWithRaycast()
     {
+        if (eyeGaze)
+        {
+            ChangeFishColour(GetRayType());
+        }
 
-        ChangeFishColour(GetRayType(eyeGaze));
+        else
+        {
+            Debug.Log("Nope.");
+        }
+       
     }
 
     // HELPERS //
@@ -45,39 +51,19 @@ public class RayCastHelpers : MonoBehaviour
     {
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Debug.Log(hit.transform.name);
-
             // Change the colour of the fish 
             ChangeFishColour fishTarget = hit.transform.GetComponent<ChangeFishColour>();
 
             if (fishTarget != null)
             {
-                Debug.Log(hit.transform.name);
                 fishTarget.ChangeColour();
             }
         }
-
-        else
-        {
-            Debug.Log("No object was hit.");
-        }
     }
 
-    private Ray GetRayType(bool gaze)
-    {
-        Debug.Log(gaze);
-
-        if (gaze)
-        {
-            raycast = new(Camera.main.transform.position, Camera.main.transform.forward);
-        }
-        else
-        {
-            position = Mouse.current.position.ReadValue();
-            raycast = Camera.main.ScreenPointToRay(position);
-
-        }
-
+    private Ray GetRayType()
+    { 
+        raycast = new(Camera.main.transform.position, Camera.main.transform.forward);
         return raycast;
     }
 }

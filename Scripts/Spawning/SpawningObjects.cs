@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SpawningObjects : MonoBehaviour
 {
-    public void SpawnObjects(float positionRange, GameObject preFab, int numberOfObjects)
+    public void SpawnObjects(float positionRange, GameObject preFab, int numberOfObjects, bool fish)
     {
         for (int i = 0; i < numberOfObjects; i++)
         {
@@ -11,16 +11,17 @@ public class SpawningObjects : MonoBehaviour
             float y;
             float z = Random.Range(-positionRange, positionRange);
 
-            if (preFab.CompareTag("Fish") || preFab.CompareTag("Whale"))
-            {
+    
+             if (fish)
+             {
                 y = Random.Range(5f, 20);
-            }
+             }
 
-            else
-            {
+             else
+             {
                 y = 0;
-            }
-           
+             }
+
             Instantiate(preFab, new Vector3(x, y, z), preFab.transform.rotation);
         }
     }

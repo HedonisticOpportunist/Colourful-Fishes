@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class FlockManager : MonoBehaviour 
 {
-    //Variables
+    // Variables
     [SerializeField] private GameObject pinkFish;
     [SerializeField] private GameObject greenFish;
 
-    // Variables
+    [SerializeField] private GameObject smallFish;
+    [SerializeField] private GameObject bigFish;
+    [SerializeField] private EyeGazeFlag eyeGazeFlag;
+
     public static FlockManager FM;
     public GameObject[] allFish;
-   
+
+    // Eye Gaze VR flag 
+    private bool eyeGaze;
+
     public Vector3 swimLimits = new(5.0f, 5.0f, 5.0f);
     public Vector3 goalPos = Vector3.zero;
     public int numFish = 20;
@@ -23,9 +29,20 @@ public class FlockManager : MonoBehaviour
 
     private void Start()
     {
-        InstantiateFish(pinkFish);
-        InstantiateFish(greenFish);
+        // Set the eye gaze boolean value
+        eyeGaze = eyeGazeFlag.eyeGazeFlag;
 
+        if (eyeGaze == true)
+        {
+            InstantiateFish(pinkFish);
+            InstantiateFish(greenFish);
+        }
+
+        else
+        {
+            InstantiateFish(smallFish);
+            InstantiateFish(bigFish);
+        }
     }
 
     // Update is called once per frame

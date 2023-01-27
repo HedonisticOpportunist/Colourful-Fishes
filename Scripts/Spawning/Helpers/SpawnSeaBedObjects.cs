@@ -19,10 +19,10 @@ public class SpawnSeaBedObjects : MonoBehaviour
     private void SpawnSeaBedItems()
     {
 
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, seaShell, 100);
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, grass, 100);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, seaShell, 100, true);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, grass, 100, true);
 
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, shark, 100);
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, whale, 100);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, shark, 100, true);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, whale, 100, true);
     }
 }

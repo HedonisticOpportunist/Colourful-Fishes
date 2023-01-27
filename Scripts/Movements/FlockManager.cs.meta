@@ -3,7 +3,15 @@ guid: 98cafa4bb020f2d49a95d039807f251d
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pinkFish: {fileID: 1318662798089844, guid: 06a4036ceebb544e494c30d599b9d2c1, type: 3}
+  - greenFish: {fileID: 1733855665772604, guid: b0489fdb6d64a4a4ba8e194e561d60cd,
+      type: 3}
+  - smallFish: {fileID: 2206852426022253465, guid: de500f6b90f89bc4c87a6585b2dea01a,
+      type: 3}
+  - bigFish: {fileID: 1937588542411740048, guid: a05072560c3476b4cb8dddf22f697392,
+      type: 3}
+  - eyeGazeFlag: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

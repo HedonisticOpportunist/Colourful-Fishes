@@ -12,7 +12,7 @@ public class SpawnMenuObjects : MonoBehaviour
 
     private void SpawnSeaCreatures()
     {
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, waterSkipper, 100);
-        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, turtle, 100);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, waterSkipper, 100, false);
+        spawnManager.GetComponent<SpawningObjects>().SpawnObjects(50, turtle, 100, false);
     }
 }

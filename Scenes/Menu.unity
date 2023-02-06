@@ -389,8 +389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColour: Yes
-  eyeGaze: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
 --- !u!1 &158471323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,10 +1152,10 @@ MonoBehaviour:
   m_text: "Welcome to Colourful Fishes (=^\u2013^)=\r\n\r\nTo get used to VR,  engage
     with the controllers to teleport to a cube of your liking. A purple, flattened
     cylinder will represent the teleportation area. You can also interact with the
-    balls. \r\n\r\nIn terms of actual gameplay, there are two options: exploring
-    the fish or changing their colour using a gaze coming from the camera. Please
-    grab the ball on the cylinder that best represents your choice to load the game
-    scene, but first you need to find it :3\r"
+    balls. \r\n\r\nIn terms of actual gameplay, the aim is to change the colour of
+    the fish using a VR gaze coming from the camera. Please grab a ball from one
+    of the cylinders located at the back to load the scene \u2013 but you need to
+    get to the cylinders first :3\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5616,8 +5614,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeColour: No
-  eyeGaze: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
 --- !u!114 &1851865903
 MonoBehaviour:
   m_ObjectHideFlags: 0

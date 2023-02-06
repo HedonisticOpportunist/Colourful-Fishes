@@ -1351,10 +1351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pinkFish: {fileID: 1318662798089844, guid: 06a4036ceebb544e494c30d599b9d2c1, type: 3}
   greenFish: {fileID: 1733855665772604, guid: b0489fdb6d64a4a4ba8e194e561d60cd, type: 3}
-  smallFish: {fileID: 2206852426022253465, guid: de500f6b90f89bc4c87a6585b2dea01a,
-    type: 3}
-  bigFish: {fileID: 1937588542411740048, guid: a05072560c3476b4cb8dddf22f697392, type: 3}
-  eyeGazeFlag: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
   allFish: []
   swimLimits: {x: 20, y: 20, z: 20}
   goalPos: {x: 10, y: 10, z: 10}
@@ -1492,7 +1488,7 @@ MonoBehaviour:
   seaShell: {fileID: 976749517787264400, guid: 2b5917efe059c424282878903fc44db8, type: 3}
   grass: {fileID: 1806273466138086, guid: 065211b13cf2c0b45a7ad739ba6e8cc2, type: 3}
   shark: {fileID: 5925960515861282153, guid: 2fb93ff3c1250a74ca5f53a6bc162675, type: 3}
-  whale: {fileID: 3582877014822275613, guid: 637fa16e41b58734ea8643b07494530a, type: 3}
+  whale: {fileID: 4882801322305221464, guid: c87fa0d6180121d42a09aff518a98e33, type: 3}
   spawnManager: {fileID: 275818307}
 --- !u!114 &1635779004
 MonoBehaviour:
@@ -1506,7 +1502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeef66d9cf6aef143887f790589c2dbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eyeGazeFlag: {fileID: 11400000, guid: 1947a3c5db49ef74082725a5ed2d9f73, type: 2}
 --- !u!82 &1635779005
 AudioSource:
   m_ObjectHideFlags: 0

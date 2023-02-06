@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7987475375894145142}
   - component: {fileID: 5277587373461953724}
   - component: {fileID: 45540169997415451}
-  - component: {fileID: -784354599659136500}
   - component: {fileID: -4989092241791957709}
   - component: {fileID: -1957272900109471580}
+  - component: {fileID: -5911895156190006174}
   - component: {fileID: -6571337539302679453}
   m_Layer: 0
   m_Name: shark
@@ -30,14 +30,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5925960515861282153}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &7987475375894145142
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -102,18 +102,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4108424097152807243, guid: ca38d4485fce19f4aa0d3d7bdd8b6cf2, type: 3}
---- !u!114 &-784354599659136500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925960515861282153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 847bbabeeaa07514c96c04d78d6fa5af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-4989092241791957709
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,6 +131,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.869073, y: 1.8705173, z: 2.4034386}
   m_Center: {x: -0.020836353, y: 0.2958555, z: 0}
+--- !u!114 &-5911895156190006174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925960515861282153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847bbabeeaa07514c96c04d78d6fa5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-6571337539302679453
 MonoBehaviour:
   m_ObjectHideFlags: 0

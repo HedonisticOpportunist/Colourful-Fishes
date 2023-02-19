@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 112462254}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.6, z: 10}
+  m_LocalPosition: {x: -1, y: 0.6, z: 12}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 112462254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b5e8d92564743744a542479862d47a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &158471323
@@ -404,6 +404,7 @@ GameObject:
   - component: {fileID: 158471327}
   - component: {fileID: 158471326}
   - component: {fileID: 158471325}
+  - component: {fileID: 158471331}
   m_Layer: 0
   m_Name: BlueFishBall
   m_TagString: Untagged
@@ -642,6 +643,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158471323}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &158471331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158471323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &231977406
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,7 +811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278017770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 10}
+  m_LocalPosition: {x: -1, y: 0, z: 12}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -899,7 +912,7 @@ Transform:
   m_Children:
   - {fileID: 1851519165}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366214633
 GameObject:
@@ -1126,8 +1139,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 50}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 1, y: 22}
+  m_SizeDelta: {x: 90, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367148081
 MonoBehaviour:
@@ -1149,13 +1162,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Welcome to Colourful Fishes (=^\u2013^)=\r\n\r\nTo get used to VR,  engage
-    with the controllers to teleport to a cube of your liking. A purple, flattened
-    cylinder will represent the teleportation area. You can also interact with the
-    balls. \r\n\r\nIn terms of actual gameplay, the aim is to change the colour of
-    the fish using a VR gaze coming from the camera. Please grab a ball from one
-    of the cylinders located at the back to load the scene \u2013 but you need to
-    get to the cylinders first :3\r"
+  m_text: "Welcome to Colourful Fishes (=^\u2013^)=\r\n\r\nTo enter the scene that
+    shows fishes changing colour, grab any ball on top of a box.\r\n\r\nTo exit the
+    application, grab any ball located on either of the two cylinders.\r\n\r\nTo
+    exit the changing fish scene, click on the trigger on either of your controllers.
+    \r\n\r\n\r\n\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1182,8 +1193,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 5.5
-  m_fontSizeBase: 5.5
+  m_fontSize: 4.5
+  m_fontSizeBase: 4.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1318,7 +1329,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401980014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1497,6 +1508,7 @@ GameObject:
   - component: {fileID: 439331788}
   - component: {fileID: 439331787}
   - component: {fileID: 439331786}
+  - component: {fileID: 439331792}
   m_Layer: 0
   m_Name: WhiteFishBall
   m_TagString: Untagged
@@ -1735,6 +1747,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439331784}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &439331792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439331784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &466842128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2514,7 @@ Transform:
   - {fileID: 2098917823}
   - {fileID: 574363794}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059437914
 GameObject:
@@ -2507,6 +2531,7 @@ GameObject:
   - component: {fileID: 1059437918}
   - component: {fileID: 1059437917}
   - component: {fileID: 1059437916}
+  - component: {fileID: 1059437922}
   m_Layer: 0
   m_Name: PinkFishBall
   m_TagString: Untagged
@@ -2745,6 +2770,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1059437914}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1059437922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059437914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1072859674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3350,7 +3387,7 @@ Transform:
   - {fileID: 383946114}
   - {fileID: 466842129}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1184257531
 GameObject:
@@ -3959,7 +3996,7 @@ Transform:
   - {fileID: 366214634}
   - {fileID: 1815404275}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1307616755
 GameObject:
@@ -3998,7 +4035,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1, y: -100}
-  m_SizeDelta: {x: 250, y: 250}
+  m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307616757
 MonoBehaviour:
@@ -4290,6 +4327,7 @@ GameObject:
   - component: {fileID: 1400239023}
   - component: {fileID: 1400239022}
   - component: {fileID: 1400239027}
+  - component: {fileID: 1400239028}
   m_Layer: 0
   m_Name: GoldfishBall
   m_TagString: Untagged
@@ -4528,6 +4566,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c89ef182c28759f4f8c99fbb0275bbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1400239028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400239020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1402804487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6598815579406187027, guid: 9f5a24a380916d14db9775daab4fe333,
@@ -4751,6 +4801,7 @@ GameObject:
   - component: {fileID: 1579968852}
   - component: {fileID: 1579968851}
   - component: {fileID: 1579968850}
+  - component: {fileID: 1579968856}
   m_Layer: 0
   m_Name: SecondWhiteFishBall
   m_TagString: Untagged
@@ -4989,6 +5040,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579968848}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1579968856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579968848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7936499f3d0487d43b754a36539a81f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1631026210
 GameObject:
   m_ObjectHideFlags: 0
@@ -5020,9 +5083,10 @@ Transform:
   - {fileID: 1331915685}
   - {fileID: 1008823342}
   - {fileID: 1815891251}
+  - {fileID: 1713130831}
   - {fileID: 1402804487}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1648261101
 GameObject:
@@ -5051,7 +5115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1648261101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 12}
+  m_LocalPosition: {x: 1, y: 0, z: 10}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5214,8 +5278,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_Father: {fileID: 1631026211}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &1713130832
 MonoBehaviour:
@@ -5247,7 +5311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1804981309}
   m_Layer: 0
-  m_Name: NAVIGATE-INTERACTABLES
+  m_Name: EXIT-INTERACTABLES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5270,7 +5334,7 @@ Transform:
   - {fileID: 1648261102}
   - {fileID: 1851865901}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815404274
 GameObject:
@@ -5580,6 +5644,7 @@ GameObject:
   - component: {fileID: 1851865904}
   - component: {fileID: 1851865903}
   - component: {fileID: 1851865902}
+  - component: {fileID: 1851865909}
   m_Layer: 0
   m_Name: ExploreBall
   m_TagString: Untagged
@@ -5595,7 +5660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851865900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.6, z: 12}
+  m_LocalPosition: {x: 1, y: 0.6, z: 10}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5830,6 +5895,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851865900}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1851865909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851865900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5e8d92564743744a542479862d47a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1921299448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5919,7 +5996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1976343365}
   m_Layer: 0
-  m_Name: INTERACTABLES
+  m_Name: SCENE-CHANGE INTERACTABLES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5943,7 +6020,7 @@ Transform:
   - {fileID: 1059437915}
   - {fileID: 1579968849}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2098917822
 GameObject:
@@ -5984,7 +6061,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098917824
 MonoBehaviour:

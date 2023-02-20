@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-/* RAYCAST HELPERS */
+/* RAYCAST HELPERS SCRIPT */
 public class RayCastHelpers : MonoBehaviour
 {
     // Position variables 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/* MOVE FISH */
+/* MOVE FISH SCRIPT */
 
 public class MoveFish : MonoBehaviour
 {
@@ -14,7 +14,6 @@ public class MoveFish : MonoBehaviour
     private Vector3 randomVector;
     private Quaternion quaternion;
 
-    // Start is called before the first frame update
     private void Start()
     {
         // Randomise the speed 
@@ -28,7 +27,6 @@ public class MoveFish : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     private void Update()
     {
 
@@ -38,16 +36,8 @@ public class MoveFish : MonoBehaviour
             transform.rotation = quaternion;
         }
 
-        if (gameObject.CompareTag("Fish"))
-        {
-            // Move forward 
-            transform.Translate(speed * Time.deltaTime * Vector3.left);
-        }
-
-        if (gameObject.CompareTag("Whale"))
-        {
-            transform.Translate(speed * Time.deltaTime * (-Vector3.forward));
-        }
+        // Move forward 
+        transform.Translate(speed * Time.deltaTime * Vector3.left);
     }
 
     private void SetRandomTime()

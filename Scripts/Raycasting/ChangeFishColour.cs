@@ -1,6 +1,6 @@
 using UnityEngine;
 
-/* CHANGE FISH COLOUR */
+/* CHANGE FISH COLOUR SCRIPT */
 public class ChangeFishColour : MonoBehaviour
 {
     public void ChangeColour()
@@ -18,11 +18,10 @@ public class ChangeFishColour : MonoBehaviour
         // Get the colour array 
         Color[] colours = CreateArray();
 
-        // Generate a random integer with parameters within 
-        // the range of the array 
+        // Generate a random integer with parameters within the range of the array 
         int randomIndex = Random.Range(0, colours.Length);
 
-        // Assign the material colour to the random index 
+        // Assign the material colour to a random index 
         meshRenderer.material.color = colours[randomIndex];
     }
 

@@ -1,6 +1,7 @@
 
 using UnityEngine;
 
+/* SPAWNING OBJECTS SCRIPT */
 public class SpawningObjects : MonoBehaviour
 {
     public void SpawnObjects(float positionRange, GameObject preFab, int numberOfObjects, bool fish)

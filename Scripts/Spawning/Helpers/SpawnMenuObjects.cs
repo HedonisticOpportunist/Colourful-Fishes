@@ -1,11 +1,13 @@
 using UnityEngine;
 
-/* SPAWN SEA CREATURES */
+/* SPAWN SEA CREATURES SCRIPT */
 public class SpawnMenuObjects : MonoBehaviour
 {
     // Sea plants and creatures
     [SerializeField] private GameObject waterSkipper;
     [SerializeField] private GameObject turtle;
+
+    // Spawn Manager 
     [SerializeField] private GameObject spawnManager;
 
     private void Start() => SpawnSeaCreatures();

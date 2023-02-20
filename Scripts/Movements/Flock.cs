@@ -1,6 +1,8 @@
 using UnityEngine;
 
-/* FLOCK */
+/* FLOCK SCRIPT 
+ * Modifed from: https://learn.unity.com/tutorial/flocking 
+ */
 public class Flock : MonoBehaviour
 {
 
@@ -74,7 +76,7 @@ public class Flock : MonoBehaviour
         foreach (GameObject go in gos)
         {
 
-            if (go != this.gameObject)
+            if (go != this.gameObject && gameObject != null)
             {
 
                 mDistance = Vector3.Distance(go.transform.position, this.transform.position);

@@ -1,6 +1,8 @@
 using UnityEngine;
 
-/* FLOCK MANAGER */
+/* FLOCK MANAGER SCRIPT
+ * Modifed from: https://learn.unity.com/tutorial/flocking 
+ */
 public class FlockManager : MonoBehaviour 
 {
     // Variables
@@ -27,7 +29,6 @@ public class FlockManager : MonoBehaviour
         InstantiateFish(greenFish);
     }
 
-    // Update is called once per frame
     private void Update()
     {
         UpdateSwimmingLimits();

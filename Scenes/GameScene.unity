@@ -180,8 +180,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   m_DistanceCalculationMode: 0
   m_SelectMode: 1
-  m_CustomReticle: {fileID: 6648783455048349331, guid: f7b963ef176fac343be349d8b4bffc75,
-    type: 3}
+  m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3039,7 +3038,8 @@ MonoBehaviour:
   m_SmoothMovement: 1
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 0}
+  m_Reticle: {fileID: 6648783455048349331, guid: f7b963ef176fac343be349d8b4bffc75,
+    type: 3}
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0
@@ -3544,7 +3544,8 @@ MonoBehaviour:
   m_SmoothMovement: 1
   m_FollowTightness: 10
   m_SnapThresholdDistance: 10
-  m_Reticle: {fileID: 0}
+  m_Reticle: {fileID: 6648783455048349331, guid: f7b963ef176fac343be349d8b4bffc75,
+    type: 3}
   m_BlockedReticle: {fileID: 0}
   m_StopLineAtFirstRaycastHit: 1
   m_StopLineAtSelection: 0

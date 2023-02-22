@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: -8668030232904087529}
   m_Layer: 0
   m_Name: GreenFish
-  m_TagString: Untagged
+  m_TagString: SpawnFish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

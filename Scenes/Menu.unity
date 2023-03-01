@@ -1164,9 +1164,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Welcome to Colourful Fishes (=^\u2013^)=\r\n\r\nTo enter the scene that
     shows fishes changing colour, grab any ball on top of a box.\r\n\r\nTo exit the
-    application, grab any ball located on either of the two cylinders.\r\n\r\n\rIn
-    order to exit the changing fish scene, click on balls on top of the cylinders
-    in it. \r\n \n\r\n\r\n\n"
+    application, grab any ball located on either of the two cylinders.\r\n\r\nTo
+    exit the changing fish scene, click on one of the two balls on top of the cylinders
+    in that very scene. \r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1193,8 +1193,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4.5
-  m_fontSizeBase: 4.5
+  m_fontSize: 4.4
+  m_fontSizeBase: 4.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

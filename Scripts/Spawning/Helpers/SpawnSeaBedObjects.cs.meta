@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 5bdb3b8554b240c439aa4ca9119f21b4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - seaShell: {fileID: 976749517787264400, guid: 2b5917efe059c424282878903fc44db8,
+      type: 3}
+  - grass: {fileID: 1806273466138086, guid: 065211b13cf2c0b45a7ad739ba6e8cc2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
